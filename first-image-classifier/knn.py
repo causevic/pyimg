@@ -1,15 +1,17 @@
 # USAGE
 # python knn.py --dataset dataset/animals
 
+import argparse
+
+from imutils import paths
+from sklearn.metrics import classification_report
+from sklearn.model_selection import train_test_split
 # import the necessary packages
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report
-from pyimagesearch.preprocessing import SimplePreprocessor
+
 from pyimagesearch.datasets import SimpleDatasetLoader
-from imutils import paths
-import argparse
+from pyimagesearch.preprocessing import SimplePreprocessor
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
